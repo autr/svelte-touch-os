@@ -1,13 +1,15 @@
 {
-  "name": "SvelteComponent",
+  "name": "svelte-touch-os",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "sapper": "^0.27.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",

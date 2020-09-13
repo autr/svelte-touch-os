@@ -1,14 +1,14 @@
 <script>
 
-  import { stores } from '@sapper/app';
-  const { preloading, page, session } = stores();
   import ArrowLeft from "svelte-material-icons/ArrowLeft.svelte";
-  export let useHistory = false;
+  export let history = false;
+
+  $: path = ( typeof window !== 'undefined' ) ? window.location.pathname : "/";
 
   $: back = ( () => {
-    const idx = $page.path.lastIndexOf('/');
+    const idx = path.lastIndexOf('/');
     if ( idx == -1 ) return '/';
-    return $page.path.substring( 0, idx );
+    return path.substring( 0, idx );
   });
 
   function previousInHistory(e) {
@@ -17,7 +17,7 @@
   
 </script>
 
-{#if !useHistory}
+{#if !history}
   <a id="back" href={back()} >
     <ArrowLeft />
     Back

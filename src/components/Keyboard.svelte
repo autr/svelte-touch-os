@@ -1,7 +1,5 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { goto } from '@sapper/app'
-  import axios from 'axios'
   import { Any, Boolean, Group, Text, Defines as d } from 'svelte-aui/src/index.js'
   export let page = {};
   export let data = {};

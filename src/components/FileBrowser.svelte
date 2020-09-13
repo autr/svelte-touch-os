@@ -1,8 +1,7 @@
 <script>
 
-	import Back from '../helpers/Back.svelte'
+	import Back from './Back.svelte'
 	import { Any, Group } from 'svelte-aui/src/index.js'
-	import { goto } from '@sapper/app'
 
 	export let page = {};
 	export let data = [];
@@ -58,7 +57,7 @@
 {#if (page.query.player || page.query.preview) }
 
 <div class="overlay player preview">
-	<a on:click={ e => goto( page.path ) }>Close</a>
+	<a>TODO:Close</a>
 	{#if page.query.player }
 		<video src={ href(page.query.player, false) } controls autoplay />
 	{/if}

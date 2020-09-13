@@ -1,9 +1,7 @@
 <script>
 
   import { createEventDispatcher } from 'svelte';
-  import { stores } from '@sapper/app';
   import { onMount, onDestroy } from 'svelte'
-  const { preloading, page, session } = stores();
 
   const dispatch = createEventDispatcher();
   export let time;

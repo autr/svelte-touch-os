@@ -1,11 +1,9 @@
-export { AudioLevels as AudioLevels } from './AudioLevels.svelte';
-export { Back as Back } from './Back.svelte';
-export { FileBrowser as FileBrowser } from './FileBrowser.svelte';
-export { Keyboard as Keyboard } from './Keyboard.svelte';
-export { Timer as Timer } from './Timer.svelte';
-export { WebCam as WebCam } from './WebCam.svelte';
-
-import UrlPattern from 'url-pattern'
+export { default as AudioLevels } from './components/AudioLevels.svelte';
+export { default as Back } from './components/Back.svelte';
+export { default as FileBrowser } from './components/FileBrowser.svelte';
+export { default as Keyboard } from './components/Keyboard.svelte';
+export { default as Timer } from './components/Timer.svelte';
+export { default as WebCam } from './components/WebCam.svelte';
 
 export const AutoPreload = async ( page, session, t ) => {
 
@@ -96,6 +94,8 @@ export function CleanJsonPath( p ) {
 
 
 export function Memory( bytes ) {
+
+	if ( !Number.isInteger(bytes) ) return {};
 
 	let kb = bytes/1024; 
 	let mb = kb/1024; 
