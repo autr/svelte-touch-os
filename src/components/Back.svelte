@@ -18,13 +18,13 @@
 </script>
 
 {#if !history}
-  <a id="back" href={back()} >
+  <a id="back" class="plr06" href={back()} >
     <ArrowLeft />
     Back
   </a>
 {:else}
 
-  <a id="back" on:click={previousInHistory} >
+  <a id="back" class="plr06" on:click={previousInHistory} >
     <ArrowLeft />
     Back
   </a>

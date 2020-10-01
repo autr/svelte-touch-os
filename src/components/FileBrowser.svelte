@@ -32,7 +32,7 @@
 </script>
 
 <style lang="sass">
-	@import 'svelte-aui/src/styles/Utils'
+	@import 'svelte-aui/src/styles/mixins'
 	.overlay
 		+fix
 		+top-left(0px, 0px)

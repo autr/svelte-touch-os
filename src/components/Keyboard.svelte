@@ -86,7 +86,7 @@
 </script>
 
 <style lang="sass">
-  @import 'svelte-aui/src/styles/Utils'
+  @import 'svelte-aui/src/styles/mixins'
   .keyboard
     flex-basis: 120px
     .row
