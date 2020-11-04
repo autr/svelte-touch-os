@@ -1,6 +1,6 @@
 <script>
 
-  import { onMount } from 'svelte'
+  import { onMount, onDestroy } from 'svelte'
   import Microphone from "svelte-material-icons/Microphone.svelte";
 
   let ref;

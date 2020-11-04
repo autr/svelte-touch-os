@@ -48,7 +48,8 @@
     variant: "text", 
     placeholder: placeholder,
     value: text,
-    currPos : 0
+    currPos : text.length,
+    grow: true
   }
 
 
