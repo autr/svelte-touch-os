@@ -5,16 +5,18 @@ export { default as Keyboard } from './components/Keyboard.svelte';
 export { default as Timer } from './components/Timer.svelte';
 export { default as WebCam } from './components/WebCam.svelte';
 
+
 export const AutoPreload = async ( page, session, t ) => {
 
     const p = `${page.path}?as=json`;
     console.log(`[AutoPreload] 🌞 attempting JSON: ${p}`)
     try {
-      const r = await t.fetch( p );
-      if (r.status !== 200) return t.error( r.status, r.statusText );
+
+      const r = await t.fetch( p )
       const data = await r.json();
+      if (r.status !== 200) return t.error( data.status, data.message )
       console.log(`[AutoPreload] ✅ 200 ${Object.keys(data)}`, (process.browser) ? data : '');
-      return { data, page };
+      return { data, page }
     } catch(err) {
       console.log(`[AutoPreload] ❌ 501 ${err}`);
       return t.error( 501, err );
